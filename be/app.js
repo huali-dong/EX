@@ -14,6 +14,7 @@ var movieRouter = require("./routes/movie");
 var adminRouter = require("./routes/admin");
 var userRouter = require("./routes/user");
 var profileRouter = require("./routes/profile");
+var seatRouter = require("./routes/seat");
 
 
 // 应用程序
@@ -53,6 +54,7 @@ app.use('/api/'+ version +'/user',userRouter);
 
 app.use('/api/'+ version +'/profile',profileRouter);
 
+app.use('/api/'+version+'/seat',seatRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
